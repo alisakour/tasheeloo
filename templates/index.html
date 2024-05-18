@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+            /* Additional custom styles */
+            body {
+                background-color: #f8f8f8;
+            }
+            .container {
+                margin-top: 50px;
+            }
+            form {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            h1 {
+                text-align: center;
+            }
+            h2 {
+                margin-top: 40px;
+            }
+            figure {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Image Search Engine</h1>
+            <form method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="query_img">Upload Image:</label>
+                    <input type="file" name="query_img" id="query_img" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            <h2>Query:</h2>
+            {% if query_path %}
+            <img src="{{ query_path }}" class="img-responsive" width="300px">
+            {% endif %}
+            <h2>Results:</h2>
+            {% for score in scores %}
+            <figure style="margin-bottom: 20px;">
+                <img src="{{ score[1] }}" class="img-responsive" height="200px">
+                <figcaption>{{ score[0] }}</figcaption>
+            </figure>
+            {% endfor %}
+        </div>
+    </body>
+</html>

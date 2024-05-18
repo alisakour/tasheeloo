@@ -1,0 +1,13 @@
+# requirements.txt
+
+# NumPy is a fundamental package for scientific computing with Python.
+numpy==1.22.4
+
+# Pillow is a Python Imaging Library that adds image processing capabilities to your Python interpreter.
+Pillow==9.1.1
+
+# Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy.
+Flask==2.1.2
+
+# TensorFlow is an end-to-end open-source platform for machine learning.
+tensorflow==2.9.1
