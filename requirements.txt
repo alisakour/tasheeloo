@@ -8,6 +8,8 @@ Pillow
 
 # Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy.
 Flask
+gunicorn
+
 
 # TensorFlow is an end-to-end open-source platform for machine learning.
 tensorflow
